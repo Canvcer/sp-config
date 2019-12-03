@@ -1,6 +1,12 @@
 spring:
   application:
     name: zuul
+  rabbitmq:
+    host: 192.168.64.5
+    port: 5672
+    username: admin
+    password: admin
+  
     
 server:
   port: 3001
@@ -15,7 +21,7 @@ zuul:
     item-service: /tiem-service/**
     user-service: /user-service/**
     order-service: /order-service/**
-  retryable: true   #开启重试,默认不开启
+  retryable: true   
 
 management:
   endpoints:
